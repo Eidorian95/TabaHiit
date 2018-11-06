@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvTitles, tvTimes, tvFinish, tvSets,tvLaps, tvTotalTime;
     private CircularProgressBar csbReady,csbWork, csbRest;
     public CountDownTimer cdTimer, resumeTimer, restTimer, fullRestTimer, cdReadyTimer;
-    public  int actualState;
+    public  int actualState, times;
     public  int laps, finalLap, sets, finalSet;
     long reminingTime = 0;
     public long milisInFuture=0;
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         final int totalTimeRestLaps = fullRest * sharedLaps;
         final int fullTime = (totalTimeWork + totalTimeRestLaps + totalTimeRest + ready  - rest - fullRest) * 1000 ;
 
+        times =  Integer.parseInt(tvTimes.getText().toString());
 
         tvTotalTime.setText("" + String.format("%02d:%02d",
                 TimeUnit.MILLISECONDS.toMinutes(fullTime),
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void readyTime(){
+    private void readyTime(){
 
             btStart.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -134,10 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
                         public void onTick(long millisUntilFinished) {
 
-                            if(tvTimes.getText().toString().equals("00:03") || tvTimes.getText().toString().equals("00:02")){
-                                setSound(R.raw.beep_short);
-                            }
-
+                            alertFinishSound();
 
                             if (isPaused || isCanceled) {
 
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-    public  void workTime(){
+    private void workTime(){
 
            actualState = 1;
 
@@ -276,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
    }
 
-    public void restTime() {
+    private void restTime() {
 
         isPaused = false;
 
@@ -343,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void pauseTime() {
+    private void pauseTime() {
                btPause.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View view) {
@@ -358,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                });
     }
 
-    public void resumeTime(){
+    private void resumeTime(){
 
         btResume.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -528,7 +526,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public  void fullRestTimer(){
+    private void fullRestTimer(){
 
         isPaused = false;
 
@@ -709,6 +707,13 @@ public class MainActivity extends AppCompatActivity {
 
         MediaPlayer mp = MediaPlayer.create(getBaseContext(), sound);
         mp.start();
+    }
+
+    private void alertFinishSound(){
+        if(tvTimes.getText().toString().equals("00:03") || tvTimes.getText().toString().equals("00:02")){
+
+            setSound(R.raw.beep_short);
+        }
     }
 
 

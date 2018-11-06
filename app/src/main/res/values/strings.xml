@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">TabaHiit</string>
+    <string name="ready">PREPARACIÓN</string>
+    <string name="work">TRABAJO</string>
+    <string name="rest">DESCANSO</string>
+    <string name="set">Ejerc.</string>
+    <string name="laps">Vueltas</string>
+    <string name="time">Tiempo</string>
+    <string name="zero">00:00</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Resumir</string>
+    <string name="start">Comenzar</string>
+    <string name="settings">Configuración</string>
+    <string name="your_times">Tus tiempos</string>
+    <string name="ready_time">Tiempo de preparación</string>
+    <string name="work_time">Tiempo de trabajo</string>
+    <string name="rest_time">Tiempo de descanso</string>
+    <string name="full_rest_time">Tiempo de descanso \n entre vueltas</string>
+    <string name="laps_settings">Vueltas</string>
+    <string name="sets_settings">Ejercicios</string>
+    <string name="add_list">Agregar a mi lista</string>
+    <string name="soon">Proximamente!</string>
+    <string name="complete_all">Complete todos los campos para continuar</string>
+    <string name="refresh">Reinicie para aplicar los cambios</string>
+    <string name="ok">Aceptar</string>
+    <string name="finish">FINALIZADO!</string>
+    <string name="great_work">BUEN TRABAJO!</string>
+    <string name="cancel">Cancelar</string>
+
+
+</resources>

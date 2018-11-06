@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TabaHiit</string>
+    <string name="ready">READY</string>
+    <string name="work">WORK</string>
+    <string name="rest">REST</string>
+    <string name="set">Sets</string>
+    <string name="laps">Laps</string>
+    <string name="time">Time</string>
+    <string name="zero">00:00</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="start">Start</string>
+    <string name="settings">Settings</string>
+    <string name="your_times">Your times</string>
+    <string name="ready_time">Ready time</string>
+    <string name="work_time">Work time</string>
+    <string name="rest_time">Rest Time</string>
+    <string name="full_rest_time">Rest between laps time</string>
+    <string name="laps_settings">Laps</string>
+    <string name="sets_settings">Ejercicios</string>
+    <string name="add_list">Add to my list</string>
+    <string name="soon">Soon!</string>
+    <string name="complete_all">Complete all fields to continue</string>
+    <string name="refresh">Refresh to apply the changes</string>
+    <string name="ok">Accept</string>
+    <string name="finish">FINALIZADO!</string>
+    <string name="great_work">BUEN TRABAJO!</string>
+</resources>

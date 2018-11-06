@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    tools:context="com.kyloren.tabahiit.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/tvTitles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:text="@string/ready"
+        android:textColor="@color/colorPrimaryDark2"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+    <com.budiyev.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/csbReady"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:animateProgress="true"
+        app:backgroundStrokeColor="@color/readyBack"
+        app:backgroundStrokeWidth="15dp"
+        app:drawBackgroundStroke="true"
+        app:foregroundStrokeCap="butt"
+        app:foregroundStrokeColor="@color/readyFore"
+        app:foregroundStrokeWidth="30dp"
+        app:indeterminate="false"
+        app:indeterminateMinimumAngle="45"
+        app:indeterminateRotationAnimationDuration="1200"
+        app:indeterminateSweepAnimationDuration="600"
+        app:maximum="100"
+        app:progress="100"
+        app:progressAnimationDuration="100"
+        app:startAngle="270" />
+
+    <com.budiyev.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/csbWork"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        app:animateProgress="true"
+        app:backgroundStrokeColor="@color/workBack"
+        app:backgroundStrokeWidth="15dp"
+        app:drawBackgroundStroke="true"
+        app:foregroundStrokeCap="butt"
+        app:foregroundStrokeColor="@color/workFore"
+        app:foregroundStrokeWidth="30dp"
+        app:indeterminate="false"
+        app:indeterminateMinimumAngle="45"
+        app:indeterminateRotationAnimationDuration="1200"
+        app:indeterminateSweepAnimationDuration="600"
+        app:maximum="100"
+        app:progress="100"
+        app:progressAnimationDuration="100"
+        app:startAngle="270" />
+
+    <com.budiyev.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/csbRest"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        app:animateProgress="true"
+        app:backgroundStrokeColor="@color/restBack"
+        app:backgroundStrokeWidth="15dp"
+        app:drawBackgroundStroke="true"
+        app:foregroundStrokeCap="butt"
+        app:foregroundStrokeColor="@color/restFore"
+        app:foregroundStrokeWidth="30dp"
+        app:indeterminate="false"
+        app:indeterminateMinimumAngle="45"
+        app:indeterminateRotationAnimationDuration="1200"
+        app:indeterminateSweepAnimationDuration="600"
+        app:maximum="100"
+        app:progress="100"
+        app:progressAnimationDuration="100"
+        app:startAngle="270" />
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorWork"
+        android:stateListAnimator="@null"
+        android:text="@string/start"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btPause"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/btResume"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btResume"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:stateListAnimator="@null"
+        android:text="@string/pause"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLaps" />
+
+
+    <Button
+        android:id="@+id/btResume"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="@color/colorWork"
+        android:stateListAnimator="@null"
+        android:text="@string/resume"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLaps" />
+
+    <TextView
+        android:id="@+id/tvTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitles"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:text="00:00"
+        android:textColor="@color/colorPrimaryDark2"
+        android:textSize="76sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/laps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvLaps"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/laps"
+        android:textColor="@color/colorLaps"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tvLaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/btStart"
+        android:layout_centerHorizontal="true"
+        android:text="0 / 0"
+        android:textColor="@color/colorLaps"
+        android:textSize="36sp" />
+
+
+    <TextView
+        android:id="@+id/tvFnish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="FINISH \n GREAT WORK"
+        android:textColor="@android:color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSets"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:text="@string/set"
+        android:textColor="@color/colorLaps"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tvSets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btStart"
+        android:layout_alignLeft="@+id/sets"
+        android:layout_alignStart="@+id/sets"
+        android:layout_marginLeft="8dp"
+        android:text="0 / 0"
+        android:textColor="@color/colorLaps"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTotalTime"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="@string/time"
+        android:textAlignment="center"
+        android:textColor="@color/colorLaps"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tvTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btStart"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="00:00"
+        android:textColor="@color/colorLaps"
+        android:textSize="36sp" />
+
+
+    <com.desarrollodroide.libraryfragmenttransactionextended.SlidingRelativeLayout
+        android:id="@+id/fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
